@@ -23,3 +23,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rack-cors', :require => 'rack/cors'
 
 gem 'todo', path: 'engines/todo'
+
+gem 'allocation', path: 'engines/allocation'

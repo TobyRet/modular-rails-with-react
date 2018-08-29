@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class TasksContainer extends Component {
+class AllocationContainer extends Component {
   constructor(props){
     super(props)
     this.state = {
-      tasks: []
+      offenders: []
     }
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3001/api/tasks.json')
+    axios.get('http://localhost:3001/api/offenders.json')
       .then(response => {
         console.log(response)
         this.setState({
-          tasks: response.data
+          offenders: response.data
         })
       })
       .catch(error => console.log(error))
@@ -23,12 +23,12 @@ class TasksContainer extends Component {
   render() {
     return (
       <div>
-          { this.state.tasks.map( task => {
+          { this.state.offenders.map( offender => {
             return (
               <div>
-                <p>__________________</p>
-                <h4>{ task.title } </h4>
-                <p> { task.content } </p>
+                <p>__________________________________</p>
+                <h4>Offender name: { offender.name } </h4>
+                <p>Risk level: { offender.risk_level } </p>
               </div>
             )
           })}
@@ -37,4 +37,4 @@ class TasksContainer extends Component {
   }
 }
 
-export default TasksContainer;
+export default AllocationContainer;
