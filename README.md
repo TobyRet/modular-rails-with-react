@@ -2,9 +2,10 @@
 
 A demo app to demo modular architecture. Contains two rails engines (dummy API's) wired up to a ReactJS client.
 
-From the root of the folder install bundle install and start up the rails server on port 3001
+From the root of the folder install bundle install, create and seed the database and start up the rails server on port 3001
 ```
 $ bundle install
+$ rails:setup
 $ rails s -p 3001
 ```
 
