@@ -14,3 +14,5 @@ $ cd client
 $ yarn install
 $ yarn start
 ```
+
+Application will be accessible from localhost:3000
